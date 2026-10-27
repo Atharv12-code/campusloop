@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://your-backend.example.com/api/:path*"
+      "destination": "https://campusloop-pxwu.onrender.com/api/:path*"
     },
     {
       "source": "/uploads/:path*",
-      "destination": "https://your-backend.example.com/uploads/:path*"
+      "destination": "https://campusloop-pxwu.onrender.com/uploads/:path*"
     }
   ]
 }
