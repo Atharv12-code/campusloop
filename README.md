@@ -340,10 +340,10 @@ Run `npm test` from `server/` for the Razorpay signature validation unit tests. 
 
 ```text
 Project Name: CampusLoop
-Student Name: [add your name]
+Student Name: Atharv Singh
 Problem Statement: Campus information is scattered across channels; students need one place for updates, questions, events, Lost & Found, and item exchange.
-GitHub Repository: [add the public repository URL]
-Deployed Application / Build: [add the public deployment URL]
+GitHub Repository: https://github.com/Atharv12-code/campusloop
+Deployed Application / Build: https://campusloop-rho.vercel.app/
 Demo Video: [add the accessible 3–5 minute video URL]
 Tech Stack: React, Vite, Node.js, Express, MongoDB, Mongoose, Razorpay
 Major Features: Authenticated community feed, search and category filtering, posts with image uploads, replies, fixed-price marketplace listings, cash/free claims, Razorpay UPI checkout, and five-minute purchase reservations.
@@ -366,3 +366,6 @@ Record a short walkthrough showing the problem and target users, then demonstrat
 | A late payment was refunded | The five-minute reservation expired or another buyer completed the listing before capture; check the Razorpay refund record. |
 | Registration rejects an email domain | Check `ALLOWED_EMAIL_DOMAINS`; an empty value allows any valid email domain. |
 
+
+
+Demo Video Link- https://drive.google.com/drive/folders/1YMgMJEKHQe3iSrOzZhSfSdnqt1-1JXsX?usp=sharing
