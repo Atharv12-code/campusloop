@@ -337,21 +337,6 @@ npm run dev
 
 Run `npm test` from `server/` for the Razorpay signature validation unit tests. A successful client build, lint, or unit test run does not by itself verify database connectivity, real Cloudinary uploads, Razorpay account configuration, actual refunds, or complete end-to-end behavior.
 
-## Deployment and submission
-
-No public deployment URL or demo video is configured in this repository yet. Those deliverables require a hosting account, production database/storage credentials, and a recording; do not treat a successful local build as a deployment.
-
-For a production deployment:
-
-1. Provision MongoDB and, for durable image storage, configure all three Cloudinary variables. Configure Razorpay test API keys and a `payment.captured` webhook secret.
-2. Deploy the Express server with `server/` as its working directory and `npm start` as its start command. Set `NODE_ENV=production`, `MONGODB_URI`, a unique random `JWT_SECRET` of at least 32 characters, `CLIENT_ORIGIN`, Razorpay secrets, and any optional email-domain or Cloudinary variables in the host's secret manager.
-3. For Vercel, set the client project root to `client/` and replace the placeholder backend hostname in `client/vercel.json`. The rewrites proxy `/api` and `/uploads` through the client origin; the Vite proxy is development-only and does not configure production routing.
-4. If deploying the client and API separately without a same-origin rewrite, configure a production API base URL and cross-origin cookie/CORS settings instead; the current client is configured for the same-origin rewrite approach.
-5. Configure the public Razorpay webhook URL and verify its signature and `payment.captured` delivery.
-6. Verify `GET /api/health`, account creation and sign-in, search/category filtering, post and image creation, replies, cash/free claims, UPI checkout, simultaneous purchase attempts, five-minute reservation expiry/release, webhook delivery, late-payment refund, and sign-out. Test with separate seller and buyer accounts.
-7. Confirm platform-to-seller settlement procedures and applicable legal, tax, and refund requirements before accepting live payments. The app does not automatically transfer funds to sellers.
-
-Before completing the official [submission form](https://forms.gle/sBy4sfqyiRG2Zpom9), add accessible links and personal details:
 
 ```text
 Project Name: CampusLoop
