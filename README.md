@@ -250,7 +250,7 @@ For Cloudinary storage, configure all three Cloudinary variables. If they are mi
 
 ### Vercel client with a separate API server
 
-The client uses relative `/api/...` URLs. The [`client/vercel.json`](./client/vercel.json) rewrites `/api` and `/uploads` through Vercel to the API server so browser requests remain same-origin and the existing `SameSite=Lax` authentication cookie works. Before deploying the client, replace `your-backend.example.com` in both rewrite destinations with the backend's public hostname. In Vercel, set the project root directory to `client/`; deploy the API separately and set its `CLIENT_ORIGIN` to the Vercel site origin. Configure `NODE_ENV=production` in the API host so authentication cookies use `Secure`.
+The client uses relative `/api/...` URLs. The [`client/vercel.json`](./client/vercel.json) rewrites `/api` and `/uploads` through Vercel to the Render API at `https://campusloop-pxwu.onrender.com`, keeping browser requests same-origin so the existing `SameSite=Lax` authentication cookie works. In Vercel, set the project root directory to `client/`; set the Render service's `CLIENT_ORIGIN` to the Vercel site origin after deployment. Configure `NODE_ENV=production` in the API host so authentication cookies use `Secure`.
 
 The Express app trusts one proxy hop for correct client IP handling behind the deployment proxy. Keep the API reachable only through trusted hosting infrastructure where possible.
 
@@ -365,5 +365,4 @@ Record a short walkthrough showing the problem and target users, then demonstrat
 | Razorpay payment is not confirmed | Check that the Checkout response reaches the server, the payment is captured, API keys match the mode, and the signed `payment.captured` webhook reaches the configured URL. |
 | A late payment was refunded | The five-minute reservation expired or another buyer completed the listing before capture; check the Razorpay refund record. |
 | Registration rejects an email domain | Check `ALLOWED_EMAIL_DOMAINS`; an empty value allows any valid email domain. |
-
 
