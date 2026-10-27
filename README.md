@@ -381,14 +381,4 @@ Record a short walkthrough showing the problem and target users, then demonstrat
 | A late payment was refunded | The five-minute reservation expired or another buyer completed the listing before capture; check the Razorpay refund record. |
 | Registration rejects an email domain | Check `ALLOWED_EMAIL_DOMAINS`; an empty value allows any valid email domain. |
 
-## Current limitations and next steps
 
-Implemented features are present in code, but this repository has not been verified here against the user's real MongoDB Atlas, Cloudinary, or Razorpay accounts. Before deployment or accepting real payments, configure Razorpay in test mode and test checkout, signature validation, webhook delivery/retries, five-minute reservation expiry, late-payment refunds, and cash/free claims. This deployment collects into the platform account and requires manual seller settlement; seller UPI IDs are not automatically paid out.
-
-Other work that may be considered for a later iteration:
-
-- Automated server API and end-to-end tests.
-- Post editing and deletion with ownership checks.
-- Visually nested replies and pagination for long reply threads.
-- Email verification and password reset.
-- Production deployment configuration, HTTPS, security headers, moderation/reporting, and privacy/community documentation.
