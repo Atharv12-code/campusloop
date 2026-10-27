@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+*.log
+.env
+.env.*
+!.env.example
+server/uploads/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
